@@ -160,15 +160,11 @@ MEDIA_ROOT=os.path.join(BASE_DIR,'media')
 SITE_ID = 1
 LOGIN_REDIRECT_URL = "/"
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+#CRISPY_TEMPLATE_PACK = 'bootstrap4'
     
 RAZOR_KEY_ID = 'rzp_test_0km3lIfYUxzBO0'
 RAZOR_KEY_SECRET = 'PDC9NQJh4X67bn7etnXaMlEN'
 
 import dj_database_url
 DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
-# Stripe API keys
-
-#STRIPE_SECRET_KEY = os.getenv("sk_test_51KlzTwSBYB8HWrpsraK9AtUchpzggjnGoHBM4aBxsMJbW5U3Pxe74iySjw75P5ThjtX8C55lDvRWDYH4FNc6TyOq00xtBwo0Gl")
-#STRIPE_PUBLISHABLE_KEY = os.getenv("pk_test_51KlzTwSBYB8HWrpsD1n7ia6HoDEC1TA2sjRPb1zqzBEyQJliSEOPq0q6i64vA5L6kVC9hi3r8zKNhXci63FxPHJs00bFIewGtd")
 
