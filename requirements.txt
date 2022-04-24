@@ -8,7 +8,7 @@ dj-database-url==0.5.0
 Django==3.0
 django-allauth==0.50.0
 django-crispy-forms==1.14.0
-django-filter==2.0.0
+django-filter==1.1.0
 django-froala-editor==4.0.10
 django-payments==1.0.0
 django-payments-razorpay==1.0
