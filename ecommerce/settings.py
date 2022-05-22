@@ -79,6 +79,19 @@ TEMPLATES = [
     },
 ]
 
+DATABASES = {
+   'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'dummymjshop',
+        'HOST':'localhost',
+        'USER':'postgres',
+        'PASSWORD':'tanu'
+    }
+}
+# Database
+# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+
+
 SOCIALACCOUNT_PROVIDERS = {
    'google': {
       'SCOPE': [
@@ -98,22 +111,6 @@ AUTHENTICATION_BACKENDS = (
 )
 
 WSGI_APPLICATION = 'ecommerce.wsgi.application'
-
-
-# Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
-
-
-DATABASES = {
-   'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dummymjshop',
-        'HOST':'localhost',
-        'USER':'postgres',
-        'PASSWORD':'tanu'
-    }
-}
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -168,6 +165,6 @@ RAZOR_KEY_SECRET = 'PDC9NQJh4X67bn7etnXaMlEN'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-#import dj_database_url
-#DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+import dj_database_url
+DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
