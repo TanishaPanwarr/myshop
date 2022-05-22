@@ -165,8 +165,8 @@ LOGIN_REDIRECT_URL = "/"
 RAZOR_KEY_ID = 'rzp_test_0km3lIfYUxzBO0'
 RAZOR_KEY_SECRET = 'PDC9NQJh4X67bn7etnXaMlEN'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-import dj_database_url
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+#import dj_database_url
+#DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
