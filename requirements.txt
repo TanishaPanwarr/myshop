@@ -26,3 +26,4 @@ sqlparse==0.4.2
 typing_extensions==4.2.0
 urllib3==1.26.9
 whitenoise==6.1.0
+django-filter==21.1
