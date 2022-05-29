@@ -7,7 +7,7 @@ urlpatterns = [
 	path('checkout/', checkout, name="index"),
  	path('paynow/', paynow, name="paynow"),
  	path('paymenthandler/',paymenthandler, name='paymenthandler'),
-	path('payment/', payment, name="payment"),
+	#path('payment/', payment, name="payment"),
 	path('charge/', charge, name="charge"),
 	path('my-orders/', oderView, name="oderView")
 ]
