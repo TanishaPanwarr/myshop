@@ -3,14 +3,13 @@
 {% block content %}
 
 <div class="container mt-5">
-  <h2 class="mb-3">Shipping Address > <span class="text-muted">Checkout</span></h2>
+  <h2 class="mb-3">Shipping Address<span class="text-muted">Checkout</span></h2>
   <div class="row">
     <div class="col-md-9">
      <div class="card mb-5" style="height: auto">
        <div class="card-body">
           <form method="POST">
           {% csrf_token %}
-
          {{ form | crispy}}
           <button type="submit" class="btn btn-primary float-right">Next</button>
           </form>
@@ -21,7 +20,7 @@
       <div class="card mb-5" style="height: auto">
         <div class="card-body">
           <p><b>Address :</b> {{ savedAddress.address }}</p>
-          <p><b>City :</b> {{ savedAddress.city }}</p>
+          <p><b>City :</b> </p>
           <p><b>Zipcode :</b> {{ savedAddress.zipcode }}</p>
           <p><b>Landmark :</b> {{ savedAddress.landmark }}</p>
         </div>

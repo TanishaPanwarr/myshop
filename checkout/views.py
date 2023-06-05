@@ -253,6 +253,8 @@ def charge(request):
 				item.purchased = True
 				item.save()
 		return render(request, 'checkout/charge.html', {"items": orderitems, "order": order })
+	return render(request, 'checkout/charge.html', {"items": orderitems, "order": order })
+
 
 
 

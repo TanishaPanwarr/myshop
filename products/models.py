@@ -31,3 +31,16 @@ class  Product(models.Model):
         return reverse("mainapp:product", kwargs={
             'slug': self.slug
         })
+     
+class Article(models.Model):
+    nid = models.IntegerField(default=0)
+    headimage =models.ImageField(upload_to='pics', blank=True)
+    title = models.CharField(max_length=100)
+    author = models.CharField(max_length=100, blank=True)
+    body = models.TextField()
+    teaser = models.TextField('teaser', blank=True)
+    created=models.DateField(auto_now=False, auto_now_add=False)
+    pub_date=models.DateField(auto_now=False, auto_now_add=False)
+    categories = models.ManyToManyField(Product)
+    def __str__(self):
+        return str(self.nid)

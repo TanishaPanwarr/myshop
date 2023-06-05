@@ -1,37 +1,52 @@
 {% load cart_tag %}
-
-<nav class="navbar navbar-expand-lg navbar-light bg-info">
+<Style>
+  .s2{ 
+        background: linear-gradient(to left,
+                orange,
+                yellow,
+               red,
+                red,
+                green,
+               pink,
+                orange,
+                yellow);
+        -webkit-background-clip: text;
+        color: transparent;
+        }
+	}
+</style>
+<nav class="navbar navbar-expand-lg navbar-light   bg-secondary">
   <div class="container">
-  <a class="navbar-brand" href="/">Myshop</a>
+  <a class="navbar-brand" href="/"> <div class="s2">MY<i>S H O P<i></div></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
+  <div class="collapse navbar-collapse bd-ligth" id="navbarNav">
     <ul class="navbar-nav ml-auto">
       <li {% if request.path == 'contact' %}class="nav-item active"{% else %}class="nav-item"{% endif %}>
-        <a class="nav-link" href="/">Men <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-light" href="/">Men <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/">Women</a>
+      <li class="nav-item ml-5">
+        <a class="nav-link text-light" href="/">Women</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/">Electronics</a>
+      <li class="nav-item ml-5">
+        <a class="nav-link text-light" href="/">Electronics</a>
       </li>
-       <li class="nav-item">
-        <a class="nav-link" href="/">Fasion</a>
+       <li class="nav-item ml-5">
+        <a class="nav-link text-light" href="/">Fashion</a>
       </li>
       {% if request.user.is_authenticated %}
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'mainapp:cart-home' %}">
+      <li class="nav-item ml-5">
+        <a class="nav-link text-light" href="{% url 'mainapp:cart-home' %}">
           <i class="fa fa-shopping-cart"></i> Cart
           <span class="badge badge-light">{{ request.user| cart_total }}</span>
         </a>
       </li>
-       <li class="nav-item">
+       <li class="nav-item ">
         
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <li class="nav-item dropdown ml-5">
+        <a class="nav-link text-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fas fa-user-tie"></i> {{ request.user.username }}
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">

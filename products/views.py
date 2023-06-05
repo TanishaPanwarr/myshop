@@ -31,4 +31,13 @@ def logout(request):
 class ProductDetail(LoginRequiredMixin, DetailView):
 	model = Product
 
+def car(request):
+    posts=Article.objects.all()
+    return render(request,'products/home.html',{'posts':posts})
+def search(request):
+    if request.method=='get':
+        name=request.GEt['name']
+        product=Product.objects.filter(name=name).get
+        product_filter = ProductFilter(request.GET, queryset=product)
+        return render(request, 'products/home.html', {'filter': product_filter})
 
